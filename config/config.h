@@ -1,6 +1,6 @@
 /*
 * Ping Pong OS
-* idiomas.h
+* config.h
 * Projeto da disciplina Sistemas Operacionais - UTFPR - 2016.02
 * Professor: Copetti
 * Alunos: Leonardo Winter Pereira (leonardowinterpereira@gmail.com)
@@ -11,23 +11,19 @@
 //                      Diretivas de Compilação                    //
 /////////////////////////////////////////////////////////////////////
 
-#ifndef __IDIOMAS__
-#define __IDIOMAS__
+#ifndef __CONFIG__
+#define __CONFIG__
 #endif
 
 /////////////////////////////////////////////////////////////////////
 //                              DEFINEs                            //
 /////////////////////////////////////////////////////////////////////
 
-#define ERR_ELEM_NAO_EXISTE                     15
-#define ERR_ELEM_VAZIO                          16
-#define ERR_ELEM_OUTRA_FILA                     17
-#define ERR_ELEM_NAO_PERTENCE_NA_FILA           18
+#define IDIOMA_PT_BR                  "pt_br"
+#define IDIOMA_EN_US                  "en_us"
+#define IDIOMA_DE                     "de"
 
-#define ERR_FILA_VAZIA_OU_NAO_EXISTE            19
+#define PATH_IDIOMAS_MAIN             "idiomas/"
+#define PATH_IDIOMAS_P00              "../idiomas/"
 
-/////////////////////////////////////////////////////////////////////
-//                    Funções a serem definidas                    //
-/////////////////////////////////////////////////////////////////////
-
-char* getMensagemPorIdioma(char* pathIdiomas, int msg, char* idioma);
+#define IDIOMA_ATUAL                  IDIOMA_PT_BR

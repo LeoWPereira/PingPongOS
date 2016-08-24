@@ -15,10 +15,17 @@
 #include <stdlib.h>
 #include <assert.h>
 
-#include "queue.h"
-#include "idiomas/pt_br.h"
+#include "config/config.h"
+#include "idiomas/idiomas.h"
+#include "p00/queue.h"
+
+/////////////////////////////////////////////////////////////////////
+//                            Constantes                           //
+/////////////////////////////////////////////////////////////////////
 
 int main () 
 {
+    printf(getMensagemPorIdioma(PATH_IDIOMAS_MAIN, ERR_ELEM_OUTRA_FILA, IDIOMA_ATUAL));
+
     return 0;
 }

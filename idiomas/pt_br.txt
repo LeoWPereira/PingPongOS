@@ -1,0 +1,19 @@
+/*
+* Ping Pong OS
+* pt_br.txt
+* Projeto da disciplina Sistemas Operacionais - UTFPR - 2016.02
+* Professor: Copetti
+* Alunos: Leonardo Winter Pereira (leonardowinterpereira@gmail.com)
+*         Lucas Zimmermann Cordeiro ()
+*/
+
+/*
+* Uma mensagem por linha, na lingua desejada.
+* Deve-se ter o cuidado de seguir a mesma numeracao de linhas
+*/
+
+ERRO: O elemento nao existe
+ERRO: O elemento está vazio
+ERRO: O elemento já está em uma fila
+ERRO: O elemento nao pertence a esta fila
+ERRO: A fila nao existe ou esta vazia

@@ -16,7 +16,8 @@
 #include <assert.h>
 
 #include "queue.h"
-#include "../idiomas/pt_br.h"
+#include "../idiomas/idiomas.h"
+#include "../config/config.h"
 
 /////////////////////////////////////////////////////////////////////
 //                              DEFINEs                            //
@@ -45,7 +46,7 @@ void queue_append (queue_t **queue, queue_t *elem)
         if (elem) // Verifica a existência do elemento elem
         {
             if (elem->prev || elem->next) // Se o elemento já estiver em outra fila, aborta a operação
-                printf('\n' + ERR_ELEM_OUTRA_FILA + '\n');
+                printf("\n%s\n", getMensagemPorIdioma(PATH_IDIOMAS_P00, ERR_ELEM_OUTRA_FILA, IDIOMA_ATUAL));
             
             else
             {
@@ -58,7 +59,7 @@ void queue_append (queue_t **queue, queue_t *elem)
             }
         }
         else
-            printf('\n' + ERR_ELEM_VAZIO);
+            printf("\n%s\n", getMensagemPorIdioma(PATH_IDIOMAS_P00, ERR_ELEM_VAZIO, IDIOMA_ATUAL));
     }
 
     else // Se a fila estiver vazia é inserido o primeiro elemento
@@ -131,7 +132,7 @@ queue_t *queue_remove (queue_t **queue, queue_t *elem)
 
                     else
                     {
-                        printf('\n' + ERR_ELEM_NAO_PERTENCE_NA_FILA + '\n');
+                        printf("\n%s\n", getMensagemPorIdioma(PATH_IDIOMAS_P00, ERR_ELEM_NAO_PERTENCE_NA_FILA, IDIOMA_ATUAL));
                         
                         return NULL;
                     }
@@ -139,7 +140,7 @@ queue_t *queue_remove (queue_t **queue, queue_t *elem)
             
             else
             {
-                printf('\n' + ERR_ELEM_NAO_EXISTE  + '\n');
+                printf("\n%s\n", getMensagemPorIdioma(PATH_IDIOMAS_P00, ERR_ELEM_NAO_EXISTE, IDIOMA_ATUAL));
                 
                 return NULL;
             }
@@ -147,7 +148,7 @@ queue_t *queue_remove (queue_t **queue, queue_t *elem)
 
     else
     {
-        printf('\n' + ERR_FILA_VAZIA_OU_NAO_EXISTE + '\n');
+        printf("\n%s\n", getMensagemPorIdioma(PATH_IDIOMAS_P00, ERR_FILA_VAZIA_OU_NAO_EXISTE, IDIOMA_ATUAL));
         
         return NULL;
     }
